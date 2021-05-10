@@ -1,0 +1,27 @@
+#### 설치 파일 다운로드 경로 #### 
+#### Linux CentOS 용  
+Virtual Box  
+    oracle virtual box 6.1.18 
+        https://download.virtualbox.org/virtualbox/6.1.18/VirtualBox-6.1-6.1.18_142142_el7-1.x86_64.rpm  
+
+Vagrant 
+    Hashicorp vagrant rpm file. 2.2.14  
+        https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.rpm
+
+Vagrant 용 OS image 
+    centos 7 image v.2004.01  
+        https://cloud.centos.org/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-2004_01.VirtualBox.box  
+
+Visual Studio Code 
+    rpm stable : 1.52.1
+    https://az764295.vo.msecnd.net/stable/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/code-1.52.1-1608137084.el7.x86_64.rpm
+
+
+
+#### Windows 64 bit 용  
+1. download oracle virtual box 6.1.18   
+    - Windows 용 : https://download.virtualbox.org/virtualbox/6.1.18/VirtualBox-6.1.18-142142-Win.exe   
+2. download vagrant rpm file. 2.2.14   
+    - Windows 용 : https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.msi  
+3. downloqd centos 7 image v.2004.01  
+    - wget https://cloud.centos.org/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-2004_01.VirtualBox.box  

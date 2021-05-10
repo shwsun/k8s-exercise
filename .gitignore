@@ -1,0 +1,5 @@
+rpm/*.rpm
+rpm/*.box
+.vagrant/
+etc/
+setups/*.box
