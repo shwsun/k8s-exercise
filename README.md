@@ -1,6 +1,6 @@
 # K8s 연습 프로젝트
 
-CentOS7 에 K8s 클러스터 개발환경을 IaC(Infrastructure ad Code)형태로 Windows host 컴퓨터에 구축하는 샘플 프로젝트 입니다.  
+CentOS7 K8s 클러스터 개발환경을 IaC(Infrastructure as Code)형태로 Windows 컴퓨터에 구축하는 샘플 프로젝트 입니다.  
 아래와 같은 환경을 구축할 계획 입니다.  
 1. VM 생성 개발 도구 
 2. 간단한 test VM
