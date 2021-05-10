@@ -42,7 +42,7 @@ Linux Host 머신에서 다시 Linux를 서비스하는 VM 환경을 구축하�
 - setups : 원격 저장소에서 설치에 필요한 파일을 가져오기 어려운 경우 미리 다운 받은 파일을 이 위치에 둘 예정입니다.  
 
 
-소스 저장소 용량상 다운로드 받은 파일을 올리지 않고, 다운로드 받을 파일명과 경로를 아래와 같이 설명해 두었습니다.   
+소스 저장소 용량상 다운로드 받은 파일을 올리지 않고, 다운로드 받을 파일명과 경로를 `requirements.txt` 파일에 기록해 두었습니다.   
   
 ---  
 ## Vagrant 와 Virtualbox 설치하기
@@ -79,11 +79,12 @@ CentOS7 설치 이미지는 파일 크기가 상당히 크기 때문에 다운�
 
 ---  
 ## test VM 이용한 맛보기 실행  
-Vagrant 와 VirtualBox를 이용해서 간단한 가상머신을 생성하고 실행해 봅니다.  
-`Vagrantfile` 파일이 존재하는 경로에서 `vagrant` 명령을 실행해야 합니다.  
+Vagrant 와 VirtualBox 설치가 끝났으면, 간단한 VM을 생성해 봅니다.  
+`Vagrantfile` 파일에 `test`라는 이름으로 test용 VM을 생성하는 스크립트 블럭을 작성해 두었습니다.  
+아랫부분을 따라하려면, `Vagrantfile` 파일이 존재하는 경로에서 `vagrant` 명령을 실행해야 합니다.  
   
-가상머신에 CentOS/7을 설치하고 IP를 부여하기만 했습니다.  
-CentOS 설치 이미지 파일에 문제가 없다면, 정상 실행될 가능성이 높습니다.  
+`test` VM에는 가상머신에 CentOS/7을 설치하고 IP를 부여하기만 했습니다.  
+간단하기 때문에, CentOS 설치 이미지 파일에 문제가 없다면, 정상 실행될 가능성이 높습니다.  
   
 `Vagrantfile` 이 위치한 경로에서 아래와 같은 명령을 입력하면 test용 헤드리스(UI 없는) 리눅스가 실행됩니다.  
 ```bash
@@ -95,7 +96,7 @@ vagrant ssh test
 ```
   
   
-VM 연결된 상태를 해결하려면 리눅스 콘솔에서 `exit`을 입력합니다.  
+VM 연결된 상태를 해지하려면 리눅스 콘솔에서 `exit`을 입력합니다.  
 ```bash
 exit
 ```
@@ -103,9 +104,11 @@ exit
 ![Vagrant 실행](./imgs/test/vagrant_test_console.png) 
   
 실행해 둔 VM 을 정지하려면 아래와 같이 입력합니다.  
-VM 생성 내역을 모두 삭제하려면 역시 아래와 같이 입력합니다.  
 ```bash
 vagrant halt test
+```
+VM 생성 내역을 모두 삭제하려면 역시 아래와 같이 입력합니다.  
+```bash
 vagrant destroy test 
 ```
 ![Vagrant 정지](./imgs/test/vagrant_test_destroy.png)   
@@ -176,7 +179,7 @@ end
 작성해 둔 주피터 노트북용 vm은 아래와 같이 실행합니다.  
 ```bash
 vagrant up jup
-# http://<vm ip address>:8888
+# type http://<vm ip address>:8888
 # type http://192.168.56.23:8888 in webbrowser. 
 ```
 주피터 실행 시, 인증 정보를 입력받지 않도록 강제 처리했기 때문에 URL만으로 호출할 수 있습니다.  
